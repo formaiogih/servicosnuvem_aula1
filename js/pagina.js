@@ -20,10 +20,13 @@ function chamarServicoViaCEP() {
             // alert("Resposta não OK");
         }
      })
-
     .then((data) => {
-        alert(JSON.stringify(data));
-        console.log(data);
+        // alert(JSON.stringify(data));
+        console.log(`Informações sobre o CEP ${cep_digitado}`);
+        console.log(`Logradouro: ${data.logradouro}`);
+        console.log(`Bairro: ${data.bairro}`);
+        console.log(`Cidade: ${data.localidade}`);
+        console.log(`Estado: ${data.uf}`);
     })
 
     .catch(error => {
