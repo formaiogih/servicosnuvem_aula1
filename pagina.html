@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário IMC</title>
+    <script src="js/pagina.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pagina.css" media="screen" />
+</head>
+<body>
+    <header>
+        <h1>Veja o seu IMC nessa calculadora!</h1>
+    </header>
+    
+    <form src="js/formulario.js">
+        <div id="triangulocima"></div>
+
+        <p>
+            Digite seu nome:
+            <input class="escrever" type="text" id="nome" name="nome" required="required"><br>
+        </p>
+        <p>
+            Digite sua idade:
+            <input class="escrever" type="text" id="idade" name="idade"><br>
+        </p>
+
+        <article class="select">
+            <label for="sexo">Qual é o seu sexo?</label>
+            <select name="sexo" id="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+        </article>
+        <br>
+
+        <p>
+            Digite seu Número de Telefone:
+            <input class="escrever" type="text" id="nTelefone" name="nTelefone"><br>
+        </p>
+
+        <p>
+            Digite seu E-mail:
+            <input class="escrever" type="text" id="email" name="email"><br>
+        </p>
+
+        <hr>
+        <hr>
+
+        <p>
+            Digite seu Logradouro:
+            <input class="escrever" type="text" id="logradouro" name="logradouro"><br>
+        </p>
+
+        <p>
+            Digite seu Bairro:
+            <input class="escrever" type="text" id="bairro" name="bairro"><br>
+        </p>
+
+        <p>
+            Digite o número de sua residência:
+            <input class="escrever" type="text" id="nresidencia" name="nresidencia"><br>
+        </p>
+
+        <p>
+            Digite seu CEP:
+            <input class="escrever" type="text" id="cep" name="cep" required="required"><br>
+        </p>
+
+        <!-- <p>
+            Digite seu peso (kg):
+            <input class="escrever" type="text" id="peso" name="peso"><br>
+        </p>
+        <p>
+            Digite sua altura (metros):
+            <input class="escrever" type="text" id="altura" name="altura"><br>
+        </p>
+        <article class="select">
+            <label for="alimentacao">Como está a sua alimentação?</label>
+            <select name="alimentacao" id="alimentacao">
+                <option value="saudavel">Saudável</option>
+                <option value="normal">Normal</option>
+                <option value="indulgente">Indulgente</option>
+            </select>
+        </article> -->
+
+        <input id="botao" type="button" value="Pesquisar endereço no VIACEP" onclick="chamarServicoViaCEP()">
+
+        <article id="printresultado">
+            <p><span id="resultado"></span></p>  
+        </article>
+
+        <article>
+            <div id="triangulobaixo"></div>
+        </article>
+    </form>
+</body>
+</html>
+
+
+
 
