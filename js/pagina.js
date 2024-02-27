@@ -1,30 +1,33 @@
 function chamarServicoViaCEP() {
-    cep_digitado = document.getElementById("cep");
+    cep_digitado = document.getElementById("cep").value;
 
     // alert("Você clicou no botão 'pesquisar' e o método foi invocado");
 
-    // alert("O número do CEP digitado foi:" + cep_digitado.value)
-
-    cep_digitado = "01001000";
+    // alert("O número do CEP digitado foi: " + cep_digitado.value);
   
-    const urlViaCEP = "viacep.com.br/ws/" + cep_digitado + "/json/";
+    const urlViaCEP = "https://viacep.com.br/ws/" + cep_digitado + "/json/";
 
-    fetch(urlViaCEP).then(response =>{
+    fetch(urlViaCEP)
+
+    .then(response => {
 
         if(response.ok){
-            alert("Resposta OK");
-        } else {
-            alert("Resposta não OK");
-        }
-    })
+            // alert("Resposta OK");
 
-    .then(data => {
-        alert(data);
+            return response.json();
+
+        } else {
+            // alert("Resposta não OK");
+        }
+     })
+
+    .then((data) => {
+        alert(JSON.stringify(data));
         console.log(data);
     })
 
     .catch(error => {
-        alert("Erro ao requisitar o serviço na nuvem!")
+        alert("ALERT: Erro ao requisitar o serviço na nuvem!")
 
         console.error("Erro ao requisitar o serviço na nuvem")
     })
